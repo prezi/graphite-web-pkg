@@ -17,3 +17,4 @@ You can check what's in the package using `dpkg -c`.
 
 - init script / upstart / systemd / supervisor / whatever config
 - wsgi.py for the included gunicorn
+- proper default settings to put data/log directories to some sane place
