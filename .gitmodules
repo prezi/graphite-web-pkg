@@ -1,0 +1,3 @@
+[submodule "graphite-web"]
+	path = graphite-web
+	url = http://github.com/graphite-project/graphite-web
