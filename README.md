@@ -3,6 +3,8 @@ graphite-web-pkg
 
 Debian package built from graphite-web Git repo with virtualenv included
 
+Also my graphite-web fork contains proxy support for the frontend (to use backends via HTTPS) and Godauth cookie generation
+
 ### Usage:
 
 ```bash
@@ -16,5 +18,4 @@ You can check what's in the package using `dpkg -c`.
 ### Missing:
 
 - init script / upstart / systemd / supervisor / whatever config
-- wsgi.py for the included gunicorn
-- proper default settings to put data/log directories to some sane place
+- proper default settings to put data/log/config directories to some sane place
