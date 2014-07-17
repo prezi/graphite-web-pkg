@@ -8,7 +8,7 @@ buildno="${1:?Give a build number}"
 gitsha="$2"
 
 : ${buildno:=$(date +%Y%m%d%H%M)}
-: ${gitsha:=$(git show-ref -d --head --heads -s --abbrev=8 master)}
+: ${gitsha:=$(git rev-parse HEAD | head -c8)}
 
 if [ -z "$gitsha" ]; then
   echo "Failed to get git SHA, give me one in \$2"
