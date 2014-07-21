@@ -4,8 +4,9 @@ set -ex
 
 export debdir=$PWD
 
-git submodule init ; git submodule update
+git clone git@github.com:micmac/graphite-web || true
 cd graphite-web
+git checkout master
 virtualenv --distribute virtualenv
 . virtualenv/bin/activate
 pip install -r requirements.txt
