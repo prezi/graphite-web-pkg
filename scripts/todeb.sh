@@ -44,6 +44,7 @@ set -e
 
 virtualenv-tools --update-path=auto "/${builddir#$tmpd}/virtualenv"
 update-alternatives --install /opt/prezi/$pkgname/current $pkgname-current /${builddir#$tmpd} 0
+dpkg-statoverride --update --add www-data www-data 0755 ${builddir#$tmpd}/webapp/graphite
 
 EOT
 chmod 755 $tmpd/DEBIAN/postinst
